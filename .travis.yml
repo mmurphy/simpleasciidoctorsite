@@ -2,6 +2,12 @@ services:
   - docker
 
 before_install:
-  - docker run --rm -v /Users/mmurphy/src/support/dockasciidoc/simpleasciidoctorsite:/documents/ asciidoctor/docker-asciidoctor asciidoctor \*.adoc
+  - docker run --rm -v /Users/mmurphy/src/support/dockasciidoc/simpleasciidoctorsite:/documents/ asciidoctor/docker-asciidoctor asciidoctor --destination-dir=docs \*.adoc
 
-
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: docs
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
