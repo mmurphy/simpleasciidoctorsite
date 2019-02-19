@@ -1,0 +1,7 @@
+services:
+  - docker
+
+before_install:
+  - docker run --rm -v /Users/mmurphy/src/support/dockasciidoc/simpleasciidoctorsite:/documents/ asciidoctor/docker-asciidoctor asciidoctor \*.adoc
+
+
