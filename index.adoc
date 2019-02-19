@@ -1,0 +1,10 @@
+= Martin Murphy
+
+****
+image::mmurphy.png[]
+Red Hat
+Waterford +
+Ireland
+****
+
+//link:building.html[Generated using Acsiidoctor]
